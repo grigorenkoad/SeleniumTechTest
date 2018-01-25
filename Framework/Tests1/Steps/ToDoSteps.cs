@@ -54,13 +54,13 @@ namespace Tests1.Steps
         [Then(@"count of TO-DO should be equal ""(.*)""")]
         public void ThenCountOfTO_DOShouldBeEqual(string count)
         {
-            Assert.AreEqual(count, page.GetCountOfToDo());
+            Assert.AreEqual(count, page.GetCountOfToDo(), "Count of TO-DO is not equal");
         }
 
         [Then(@"Clear Completed option is displayed")]
         public void ThenClearCompletedOptionIsDisplayed()
         {
-            Assert.IsTrue(page.IsClearCompletedDisplayed());
+            Assert.IsTrue(page.IsClearCompletedDisplayed(), "Clear Completed is missing");
         }
     }
 }

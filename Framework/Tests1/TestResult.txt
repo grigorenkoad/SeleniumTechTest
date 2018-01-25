@@ -1,0 +1,79 @@
+=> Tests1.Features.ToDoFeatureFeature.AddTO_DO
+Given TO-DO Page is opened
+-> done: ToDoSteps.GivenTO_DOPageIsOpened() (5.8s)
+When I type "text" text into TO-DO Input on TO-DO Page
+-> done: ToDoSteps.WhenITypeTextIntoTO_DOInputOnTO_DOPage("text") (0.7s)
+Then "text" TO-DO is displayed in TO-DO list
+-> done: ToDoSteps.ThenTO_DOIsDisplayedInTO_DOList("text", "displayed") (0.0s)
+And count of TO-DO should be equal "1"
+-> done: ToDoSteps.ThenCountOfTO_DOShouldBeEqual("1") (0.1s)
+When I open Active tab
+-> done: ToDoSteps.WhenIOpenActiveTab() (0.1s)
+Then "text" TO-DO is displayed in TO-DO list
+-> done: ToDoSteps.ThenTO_DOIsDisplayedInTO_DOList("text", "displayed") (0.0s)
+And count of TO-DO should be equal "0"
+-> error:   Count of TO-DO is not equal
+  String lengths are both 1. Strings differ at index 0.
+  Expected: "0"
+  But was:  "1"
+  -----------^
+
+=> Tests1.Features.ToDoFeatureFeature.ClearCompletedTO_DO
+Given TO-DO Page is opened
+-> done: ToDoSteps.GivenTO_DOPageIsOpened() (4.8s)
+When I type "text" text into TO-DO Input on TO-DO Page
+-> done: ToDoSteps.WhenITypeTextIntoTO_DOInputOnTO_DOPage("text") (0.7s)
+When I complete "text" TO-DO
+-> done: ToDoSteps.WhenCompleteTO_DO("complete", "text") (0.1s)
+And clear compleded TO-DO
+-> done: ToDoSteps.WhenClearComplededTO_DO() (0.1s)
+Then "text" TO-DO is missing in TO-DO list
+-> done: ToDoSteps.ThenTO_DOIsDisplayedInTO_DOList("text", "missing") (0.0s)
+=> Tests1.Features.ToDoFeatureFeature.CompleteTO_DO
+Given TO-DO Page is opened
+-> done: ToDoSteps.GivenTO_DOPageIsOpened() (4.8s)
+When I type "text" text into TO-DO Input on TO-DO Page
+-> done: ToDoSteps.WhenITypeTextIntoTO_DOInputOnTO_DOPage("text") (0.7s)
+When I complete "text" TO-DO
+-> done: ToDoSteps.WhenCompleteTO_DO("complete", "text") (0.1s)
+Then count of TO-DO should be equal "0"
+-> done: ToDoSteps.ThenCountOfTO_DOShouldBeEqual("0") (0.1s)
+When I open Active tab
+-> done: ToDoSteps.WhenIOpenActiveTab() (0.1s)
+Then "text" TO-DO is missing in TO-DO list
+-> done: ToDoSteps.ThenTO_DOIsDisplayedInTO_DOList("text", "missing") (0.0s)
+And count of TO-DO should be equal "0"
+-> done: ToDoSteps.ThenCountOfTO_DOShouldBeEqual("0") (0.1s)
+When I open Completed tab
+-> done: ToDoSteps.WhenIOpenCompletedTab() (0.1s)
+Then "text" TO-DO is displayed in TO-DO list
+-> done: ToDoSteps.ThenTO_DOIsDisplayedInTO_DOList("text", "displayed") (0.0s)
+And count of TO-DO should be equal "0"
+-> done: ToDoSteps.ThenCountOfTO_DOShouldBeEqual("0") (0.1s)
+And Clear Completed option is displayed
+-> done: ToDoSteps.ThenClearCompletedOptionIsDisplayed() (0.0s)
+=> Tests1.Features.ToDoFeatureFeature.UncheckCompletedTO_DO
+Given TO-DO Page is opened
+-> done: ToDoSteps.GivenTO_DOPageIsOpened() (4.8s)
+When I type "text" text into TO-DO Input on TO-DO Page
+-> done: ToDoSteps.WhenITypeTextIntoTO_DOInputOnTO_DOPage("text") (0.6s)
+When I complete "text" TO-DO
+-> done: ToDoSteps.WhenCompleteTO_DO("complete", "text") (0.1s)
+And I open Active tab
+-> done: ToDoSteps.WhenIOpenActiveTab() (0.1s)
+Then "text" TO-DO is missing in TO-DO list
+-> done: ToDoSteps.ThenTO_DOIsDisplayedInTO_DOList("text", "missing") (0.0s)
+When I open Completed tab
+-> done: ToDoSteps.WhenIOpenCompletedTab() (0.1s)
+Then "text" TO-DO is displayed in TO-DO list
+-> done: ToDoSteps.ThenTO_DOIsDisplayedInTO_DOList("text", "displayed") (0.0s)
+When I uncomplete "text" TO-DO
+-> done: ToDoSteps.WhenCompleteTO_DO("uncomplete", "text") (0.1s)
+Then "text" TO-DO is missing in TO-DO list
+-> done: ToDoSteps.ThenTO_DOIsDisplayedInTO_DOList("text", "missing") (0.0s)
+When I open Active tab
+-> done: ToDoSteps.WhenIOpenActiveTab() (0.1s)
+Then "text" TO-DO is displayed in TO-DO list
+-> done: ToDoSteps.ThenTO_DOIsDisplayedInTO_DOList("text", "displayed") (0.0s)
+=> Tests1.Features.ToDoFeatureFeature
+-> Using app.config

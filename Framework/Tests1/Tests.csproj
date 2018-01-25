@@ -94,7 +94,6 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ToDoFeature.feature.cs</LastGenOutput>
     </None>
-    <None Include="runtests.cmd" />
     <None Include="SpecRunTestProfile.xsd">
       <SubType>Designer</SubType>
     </None>
